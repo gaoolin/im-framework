@@ -2,11 +2,11 @@ package com.im.aa.inspection.config;
 
 import com.im.aa.inspection.entity.standard.EqLstTplDO;
 import com.im.aa.inspection.entity.standard.EqLstTplInfoDO;
+import org.im.cache.config.BackendType;
 import org.im.cache.config.CacheConfig;
 import org.im.cache.core.Cache;
 import org.im.cache.core.CacheManager;
 import org.im.cache.impl.manager.DefaultCacheManager;
-import org.im.cache.impl.support.BackendType;
 import org.im.config.ConfigurationManager;
 import org.im.config.impl.DefaultConfigurationManager;
 import org.slf4j.Logger;
@@ -82,7 +82,7 @@ public class EqpLstRedisCacheConfig {
         }
 
         CacheConfig config = new CacheConfig();
-        config.setPrefix(name);
+        config.setCacheName(name);
         config.setMaximumSize(maxSize);
         config.setExpireAfterWrite(expireMs);
         config.setBackendType(BackendType.REDIS);

@@ -1,6 +1,7 @@
 package com.im.aa.inspection.service;
 
 import com.im.aa.inspection.comparator.EqLstInspectionModelV3;
+import com.im.aa.inspection.comparator.EqLstInspectionModelV4;
 import com.im.aa.inspection.entity.param.EqLstParsed;
 import com.im.aa.inspection.entity.reverse.EqpReverseDO;
 import com.im.aa.inspection.entity.standard.EqLstTplInfoDO;
@@ -31,7 +32,7 @@ import static com.im.qtech.data.constant.EqLstInspectionConstants.PROPERTIES_TO_
 public class ParamCheckService {
     private static final Logger logger = LoggerFactory.getLogger(ParamCheckService.class);
     // 使用专业的参数比较器
-    private static final EqLstInspectionModelV3 COMPARATOR = EqLstInspectionModelV3.getInstance();
+    private static final EqLstInspectionModelV4 COMPARATOR = EqLstInspectionModelV4.getInstance();
     private static final String SOURCE_AA_LIST = "aa-list";
     private final CacheService cacheService;
     private final DatabaseService databaseService;
